@@ -1,4 +1,5 @@
 import media
+import fresh_tomatoes
 
 # The idea to split long strings into individual concatenated lines came from StackOverflow
 # when I was researching a project months ago. This is meant to avoid any whitespace errors
@@ -45,7 +46,7 @@ repo = media.Movie("Repo! The Genetic Opera",
                    "/en/7/7a/RepoGeneticOperaOfficialPoster.jpg",
                    "https://www.youtube.com/watch?v=MzgpU25C6fg")
 
-les_miserables = media.Movie("Les Misérables",
+les_miserables = media.Movie("Les Miserables",
                              "A prisoner on parole finds himself caught " +
                              "in the midst of a violent revolution as he " +
                              "flees the police.",
@@ -53,4 +54,11 @@ les_miserables = media.Movie("Les Misérables",
                              "/en/b/b0/Les-miserables-movie-poster1.jpg",
                              "https://www.youtube.com/watch?v=YmvHzCLP6ug")
     
+movies = [little_shop,
+          phantom_opera,
+          moulin_rouge,
+          sweeney_todd,
+          repo,
+          les_miserables]
 
+fresh_tomatoes.open_movies_page(movies)
