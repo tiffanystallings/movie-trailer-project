@@ -14,3 +14,5 @@ phantom_opera = media.Movie("Phantom of the Opera",
                             "1870's opera house.",
                             "https://upload.wikimedia.org/wikipedia/en/d/d6/Poto2.jpg",
                             "https://www.youtube.com/watch?v=N91AL8sAh9o")
+
+little_shop.show_trailer()
