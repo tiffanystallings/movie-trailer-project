@@ -6,7 +6,7 @@ Using Git Bash:
 `$ git clone https://github.com/tiffanystallings/movie-trailer-project.git`
 
 From a ZIP:  
-1. Visit the project's github [here](https://github.com/  tiffanystallings/movie-trailer-project)
+1. Visit the project's github [here](https://github.com/tiffanystallings/movie-trailer-project)
 2. Click the **Clone or Download** dropdown box and select  
 **Download ZIP**.
 3. Open the ZIP and click **Extract All**. Select your preferred  folder and hit **Extract**.
