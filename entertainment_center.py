@@ -1,10 +1,19 @@
 import media
 import fresh_tomatoes
 
-# The idea to split long strings into individual concatenated lines came from StackOverflow
-# when I was researching a project months ago. This is meant to avoid any whitespace errors
-# while keeping the code neat and easy to read.
+# The idea to split long strings into individual
+# concatenated lines came from StackOverflow
+# when I was researching a project months ago.
+# This is meant to avoid any whitespace errors
+# that could happen by simply escaping (\) and
+# using tabs or spaces to re-align the code
+# mid-string. I like keeping my long strings in
+# neat little chunks for readability.
 
+
+# Creating instances of the Movie class following
+# the media.Movie(title, storyline, poster image, trailer)
+# convention.
 little_shop = media.Movie("Little Shop of Horrors",
                           # This is IMDBs description. The rest are my own
                           "A nerdy florist finds his chance " +
@@ -53,7 +62,8 @@ les_miserables = media.Movie("Les Miserables",
                              "https://upload.wikimedia.org/wikipedia" +
                              "/en/b/b0/Les-miserables-movie-poster1.jpg",
                              "https://www.youtube.com/watch?v=YmvHzCLP6ug")
-    
+
+# Adding all instances of media.Movie() to a list    
 movies = [little_shop,
           phantom_opera,
           moulin_rouge,
@@ -61,4 +71,5 @@ movies = [little_shop,
           repo,
           les_miserables]
 
+# Passing movies list to be built by fresh_tomatoes
 fresh_tomatoes.open_movies_page(movies)

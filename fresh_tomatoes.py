@@ -10,6 +10,8 @@ main_page_head = '''
 <head>
     <meta charset="utf-8">
     <title>Fresh Tomatoes!</title>
+    <!-- Google Fonts Pacifico -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
@@ -19,6 +21,7 @@ main_page_head = '''
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
+            background-color: #eee;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -38,10 +41,14 @@ main_page_head = '''
         .movie-tile {
             margin-bottom: 20px;
             padding-top: 20px;
+            height: 500px;
         }
         .movie-tile:hover {
-            background-color: #EEE;
+            background-color: #aaa;
             cursor: pointer;
+        }
+        .movie-tile:hover .storyline {
+            display: block;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -55,6 +62,20 @@ main_page_head = '''
             left: 0;
             top: 0;
             background-color: white;
+        }
+        .nav {
+            position: absolute;
+            background-color: #420505;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+            font-family: 'Pacifico', cursive;
+        }
+        .storyline {
+            display: none;
         }
     </style>
     <script type="text/javascript" charset="utf-8">
@@ -104,12 +125,8 @@ main_page_content = '''
 
     <!-- Main Page Content -->
     <div class="container">
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
-          </div>
-        </div>
+      <div class="nav" role="navigation">
+        <p>Fresh Tomatoes Movie Trailers - Musical Edition!</p>
       </div>
     </div>
     <div class="container">
@@ -123,8 +140,9 @@ main_page_content = '''
 # A single movie entry html template
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-    <img src="{poster_image_url}" width="220" height="342">
+    <img class="poster-image" src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
+    <p class="storyline">{movie_storyline}</p>
 </div>
 '''
 
@@ -145,7 +163,8 @@ def create_movie_tiles_content(movies):
         content += movie_tile_content.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
+            trailer_youtube_id=trailer_youtube_id,
+            movie_storyline=movie.storyline
         )
     return content
 

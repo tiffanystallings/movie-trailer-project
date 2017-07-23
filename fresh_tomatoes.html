@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Fresh Tomatoes!</title>
+    <!-- Google Fonts Pacifico -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
@@ -13,6 +15,7 @@
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
+            background-color: #eee;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -32,10 +35,14 @@
         .movie-tile {
             margin-bottom: 20px;
             padding-top: 20px;
+            height: 500px;
         }
         .movie-tile:hover {
-            background-color: #EEE;
+            background-color: #aaa;
             cursor: pointer;
+        }
+        .movie-tile:hover .storyline {
+            display: block;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -49,6 +56,20 @@
             left: 0;
             top: 0;
             background-color: white;
+        }
+        .nav {
+            position: absolute;
+            background-color: #420505;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+            font-family: 'Pacifico', cursive;
+        }
+        .storyline {
+            display: none;
         }
     </style>
     <script type="text/javascript" charset="utf-8">
@@ -94,44 +115,46 @@
 
     <!-- Main Page Content -->
     <div class="container">
-      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
-          </div>
-        </div>
+      <div class="nav" role="navigation">
+        <p>Fresh Tomatoes Movie Trailers - Musical Edition!</p>
       </div>
     </div>
     <div class="container">
       
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="jFENSU8CmZk" data-toggle="modal" data-target="#trailer">
-    <img src="https://upload.wikimedia.org/wikipedia/en/5/5b/Little_shop_of_horrors.jpg" width="220" height="342">
+    <img class="poster-image" src="https://upload.wikimedia.org/wikipedia/en/5/5b/Little_shop_of_horrors.jpg" width="220" height="342">
     <h2>Little Shop of Horrors</h2>
+    <p class="storyline">A nerdy florist finds his chance for success and romance with the help of a giant man-eating plant who demands to be fed.</p>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="N91AL8sAh9o" data-toggle="modal" data-target="#trailer">
-    <img src="https://upload.wikimedia.org/wikipedia/en/d/d6/Poto2.jpg" width="220" height="342">
+    <img class="poster-image" src="https://upload.wikimedia.org/wikipedia/en/d/d6/Poto2.jpg" width="220" height="342">
     <h2>Phantom of the Opera</h2>
+    <p class="storyline">A mysterious 'Angel of Music controls the goings-on of an 1870's opera house.</p>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="2PpgPxjzbkA" data-toggle="modal" data-target="#trailer">
-    <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Moulin_rouge_poster.jpg" width="220" height="342">
+    <img class="poster-image" src="https://upload.wikimedia.org/wikipedia/en/9/9f/Moulin_rouge_poster.jpg" width="220" height="342">
     <h2>Moulin Rouge</h2>
+    <p class="storyline">A story of love in Bohemian Revolution era France.</p>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="iGm8s3XKWcI" data-toggle="modal" data-target="#trailer">
-    <img src="https://upload.wikimedia.org/wikipedia/en/4/4b/Sweeneylarge.jpg" width="220" height="342">
+    <img class="poster-image" src="https://upload.wikimedia.org/wikipedia/en/4/4b/Sweeneylarge.jpg" width="220" height="342">
     <h2>Sweeney Todd</h2>
+    <p class="storyline">A transported barber returns to London to avenge his broken family.</p>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="MzgpU25C6fg" data-toggle="modal" data-target="#trailer">
-    <img src="https://upload.wikimedia.org/wikipedia/en/7/7a/RepoGeneticOperaOfficialPoster.jpg" width="220" height="342">
+    <img class="poster-image" src="https://upload.wikimedia.org/wikipedia/en/7/7a/RepoGeneticOperaOfficialPoster.jpg" width="220" height="342">
     <h2>Repo! The Genetic Opera</h2>
+    <p class="storyline">In a world of commercialized organ transplants, failure to make on-time payments could mean a grim visit from GeneCo's Repo Man.</p>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="YmvHzCLP6ug" data-toggle="modal" data-target="#trailer">
-    <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/Les-miserables-movie-poster1.jpg" width="220" height="342">
-    <h2>Les Misérables</h2>
+    <img class="poster-image" src="https://upload.wikimedia.org/wikipedia/en/b/b0/Les-miserables-movie-poster1.jpg" width="220" height="342">
+    <h2>Les Miserables</h2>
+    <p class="storyline">A prisoner on parole finds himself caught in the midst of a violent revolution as he flees the police.</p>
 </div>
 
     </div>
