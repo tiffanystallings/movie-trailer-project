@@ -5,8 +5,6 @@ class Movie():
     A template that holds information on movies and allows the
     user to play the movie's trailer.
     '''
-
-    VALID_RATINGS = ['G', 'PG', 'PG-13', 'R', 'NC-17']
     
     def __init__(self, movie_title, movie_storyline, poster_image,
                  trailer_youtube):
