@@ -13,7 +13,7 @@ import fresh_tomatoes
 
 # Creating instances of the Movie class following
 # the media.Movie(title, storyline, poster image, trailer)
-# convention.
+# template.
 little_shop = media.Movie("Little Shop of Horrors",
                           # This is IMDBs description. The rest are my own
                           "A nerdy florist finds his chance " +
