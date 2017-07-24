@@ -21,7 +21,10 @@ main_page_head = '''
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
-            background-color: #eee;
+            background-color: #211;
+        }
+        h2 {
+            font-family: 'Pacifico', cursive;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -42,13 +45,17 @@ main_page_head = '''
             margin-bottom: 20px;
             padding-top: 20px;
             height: 500px;
+            color: white;
         }
         .movie-tile:hover {
-            background-color: #aaa;
+            background-color: #988;
             cursor: pointer;
         }
         .movie-tile:hover .storyline {
             display: block;
+        }
+        .movie-tile:hover .poster-image {
+            box-shadow: 10px 10px 5px #766;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -76,6 +83,9 @@ main_page_head = '''
         }
         .storyline {
             display: none;
+        }
+        .poster-image {
+            box-shadow: 10px 10px 5px #000;
         }
     </style>
     <script type="text/javascript" charset="utf-8">
